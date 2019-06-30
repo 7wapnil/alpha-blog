@@ -4,5 +4,9 @@ Rails.application.routes.draw do
 
   resources :articles
 
+  resources :users, except: [:new]
+
   get 'about' => 'pages#about'
+
+  get 'signup' => 'users#new'
 end
